@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <table border= "1" id = "result"> 
+        <tr><th>
+            Number
+        </th>
+            <th>
+                Square
+            </th>
+        <th>
+            Cube
+        </th>
+    </tr>
+    </table>
+    <script>
+        var tb = document.getElementById("result");
+        for(var i=1;i<=10;i++)
+        {   
+            var row = document.createElement("tr");
+            var d1 = document.createElement("td");
+            var d2 = document.createElement("td");
+            var d3 = document.createElement("td");
+            var s1 = document.createTextNode(i);
+            var s2 = document.createTextNode(i*i);
+            var s3 = document.createTextNode(i*i*i);
+            d1.appendChild(s1);
+            d2.appendChild(s2);
+            d3.appendChild(s3);
+            row.appendChild(d1);
+            row.appendChild(d2);
+            row.appendChild(d3);
+            tb.appendChild(row);
+        }
+    </script>
+</body>
+</html>
